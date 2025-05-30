@@ -1,0 +1,99 @@
+.login-all{
+  display: grid;
+      /* justify-content: center; */
+      grid-template-columns: 1fr 1fr;
+  
+  margin-inline: 13rem;
+  margin-block: 4rem; /* Equal spacing from all sides */
+  background: white;
+  background-repeat: no-repeat;
+  background-size: cover; /* Makes the background responsive */
+  /* min-height: 100vh;  */
+  min-height: calc(100vh - 8rem); 
+  /* Ensures the background spans the full viewport */
+
+}
+.img-login{
+  height: 100%;
+  width:90%;
+}
+.login-box{
+  display: flex;
+    flex-direction: column;
+    /* align-items: self-start; */
+    justify-content: center;
+    gap: 1.3rem;
+}
+label{
+  display: block;
+    margin-bottom: .5rem;
+    margin-inline-start: .8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+input[type="text"],input[type="password"]{
+  width: 90%;
+  height: 2.8rem;
+  border-radius: 2rem;
+  border: 1px solid #868181;
+  /* border: none; */
+  border-bottom: 2.4px solid #847d7d;
+  padding: 1.2rem;
+  color: #0d0c0c;
+
+}
+.input-container{
+  width: 100%;
+  position:relative
+}
+.register-text{
+  width: 90%;
+  padding-block: .8rem;
+  border: none;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #ad83e5);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222020;
+  margin-block: 1rem;
+  border-radius:1rem;
+  color: #0d0c0c;
+}
+.heding-text{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.well{
+font-size: 2rem;
+font-weight: 700;
+background: linear-gradient(90deg, #b20dec, #df6f82, #09cde1);
+      -webkit-background-clip: text; /* Clips the gradient to the text */
+      -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+      
+      margin-inline-start: 1.7rem;
+
+}
+.acc{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0d0c0c;
+}
+.pwd{
+  font-size: .8rem;
+    font-weight: 500;
+    display: block;
+    width: 86%;
+    text-align: right;
+    color: #6ba2e9;
+}
+.tet{
+  /* position: relative; */
+}
+.eye{
+  position: absolute;
+  right: 4.3rem;
+  top: 2.5rem;
+  height: auto;
+  width: 20px;
+
+}

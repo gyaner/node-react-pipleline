@@ -1,0 +1,128 @@
+# # # services:
+# # #   backend:
+# # #     build:
+# # #       context: ./backend # Path to your backend folder
+# # #     ports:
+# # #       - "3008:3008" # Maps backend service to localhost:3008
+# # #     depends_on:
+# # #       - mongo # Ensures backend waits for MongoDB to start
+# # #     networks:
+# # #       - app-network
+# # #     environment:
+# # #       DATABASE_LOCAL: mongodb://mongo:27017/ecommerce # Connection string
+
+# # #   frontend:
+# # #     build:
+# # #       context: ./frontend # Path to your frontend folder
+# # #     ports:
+# # #       - "3000:80" # Map container port 80 to host port 3000
+# # #     environment:
+# # #       - REACT_APP_API_BASE_URL=http://backend:3008/api/v1
+# # #     env_file:
+# # #       - .env.docker
+# # #     depends_on:
+# # #       - backend
+# # #     networks:
+# # #       - app-network
+
+# # #   mongo:
+# # #     image: mongo:5.0 # MongoDB version
+# # #     container_name: mongo
+# # #     ports:
+# # #       - "27017:27017" # Maps MongoDB to localhost:27017
+# # #     networks:
+# # #       - app-network
+
+# # # networks:
+# # #   app-network:
+# # #     driver: bridge
+
+
+# # services:
+# #   backend:
+# #     build:
+# #       context: ./backend
+# #     ports:
+# #       - "3008:3008"  # Map backend port to localhost:3008
+# #     networks:
+# #       - app-network
+      
+# #     environment:
+# #       DATABASE_LOCAL: mongodb://mongo:27017/ecommerce
+
+# #   frontend:
+# #     build:
+# #       context: ./frontend
+# #     ports:
+# #       - "3000:80"  # Map frontend port to localhost:3000
+# #     env_file:
+# #       - ./frontend/.env.docker
+      
+# #     networks:
+# #       - app-network
+# #     depends_on:
+# #       - backend
+
+# #   mongo:
+# #     image: mongo:5.0
+# #     container_name: mongo
+# #     ports:
+# #       - "27017:27017"
+# #     networks:
+# #       - app-network
+
+# # networks:
+# #   app-network:
+# #     driver: bridge
+
+
+# # version: '3.8'
+
+services:
+  # Node.js Backend Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3008:3008" # Map backend port to localhost
+    networks:
+      - app-network
+    environment:
+      DATABASE_LOCAL: mongodb://mongo:27017/ecommerce # MongoDB connection string
+
+  # React Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+     
+    environment:
+      - REACT_APP_API_BASE_URL=http://backend:3008/api/v1
+      
+    ports:
+      - "3000:80"  # Map frontend port to localhost:3000
+    networks:
+      - app-network
+    env_file:
+      - .env.docker
+    depends_on:
+      - backend  # Ensure backend starts before frontend
+
+   
+
+  # MongoDB Database Service
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    ports:
+      - "27017:27017" # MongoDB port
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
+

@@ -1,0 +1,237 @@
+.outer-border {
+  
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+    
+    /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-size: cover;
+    overflow: hidden;
+  height: 100vh;
+  }
+  
+  .inner-border {
+    margin: .3rem 1rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    width: 50%;
+    padding-inline: 3rem;
+    gap: 3rem;
+    flex-direction: column;
+    max-height: 90%;
+    
+  }
+  
+  .registration {
+    font-size: 24px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    color: #000;
+    /* Text color */
+    display: inline-block;
+    position: relative;
+    /* margin-top: 22px;
+    margin-bottom: -26px; */
+    margin-block: 1.1rem;
+  
+  }
+  
+  .registration::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    /* Distance from the text to the underline */
+    width: 20%;
+    /* Underline spans full text width */
+    height: 2px;
+    /* Thickness of the underline */
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+    border-radius: 5px;
+    /* Optional: Rounds the edges */
+  }
+  
+  
+  .form-contant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    gap: 3rem;
+  
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+      color: #464242;
+      font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   
+        border-bottom: 2.4px solid #ccc; /* Light bottom border */
+       
+  }
+  .gender-container{
+    display: flex;
+        flex-direction: column;
+        gap: 12px;
+  }
+  .radio-btn {
+    display: flex;
+    gap: 4rem;
+  }
+  .sing{
+    display: flex;
+  }
+  .register-btn{
+    margin-block: 2rem;
+  }
+  .register-text{
+    width: 100%;
+    padding-block: .6rem;
+    border: none;
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #ad83e5);
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+  }
+    
+  /* // category List css */
+  .main {
+    display: grid;
+  
+    margin: 1rem 2rem;
+  }
+  
+  .heading-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #499de7;
+  }
+  
+  .heading-text {
+    font-size: 1.5rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .action-btn {
+    margin-inline: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .del-text {
+    font-size: .8rem;
+    padding-inline: .6rem;
+    padding-block: .6rem;
+    /* color: #ffffff; */
+    /* font-weight: 500; */
+    border-radius: .2rem;
+    border: none;
+    background-color: #ff0000;
+    color: #ffffff;
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .add-text {
+    font-size: .8rem;
+    padding-inline: .6rem;
+    padding-block: .6rem;
+    /* color: #ffffff; */
+    /* font-weight: 500; */
+    border-radius: .2rem;
+    border: none;
+    background-color: green;
+    color: #ffffff;
+    display: flex;
+    gap: .3rem;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .link{
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #ffff;
+  }
+  
+  
+  .table-container {
+    /* width: 80%; */
+    /* margin: auto; */
+    border: 1px solid #ffffffff;
+    /* border-radius: 5px; */
+    overflow: hidden;
+    background: #ffffffff;
+  }
+  
+  table {
+    width: 100%;
+    /* border-collapse: collapse; */
+  }
+  
+  thead {
+    background-color: #f8f9fa;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef;
+    /* Highlight row on hover */
+  }
+  
+  
+  th input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  /* tbody tr:hover {
+      background-color: #f1f1f1;
+    } */
+  .icon {
+    width: 14px;
+    height: auto;
+    background: white;
+    border: none;
+    border-radius: 100%;
+  }

@@ -17,6 +17,12 @@ node {
         echo "❌ Branch '${branch}' is not configured for deployment. Skipping pipeline."
         return
     }
+    stage('Check Docker Compose') {
+    steps {
+        echo "cking docker compose version"
+        sh 'docker-compose --version'
+    }
+}
 
     stage('Checkout') {
         echo "📦 Checking out code from branch: '${branch}'"

@@ -40,6 +40,9 @@ COPY . .
 
 # Dockerfile
 #COPY .env.docker .env
+# Use .env.aws as .env in Jenkins build
+ARG REACT_ENV=aws
+RUN cp .env.${REACT_ENV} .env
 
 # Build the React app
  RUN npm run build

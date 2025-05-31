@@ -25,7 +25,7 @@ node {
 
     stage('Build React App') {
         echo "⚙️ Building React frontend inside 'client/' directory"
-        dir('client') {
+        dir('frontend') {
             sh 'npm install'
             sh 'CI=false npm run build'
         }

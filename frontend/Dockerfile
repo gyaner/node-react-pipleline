@@ -39,7 +39,7 @@ RUN npm install
 COPY . .
 
 # Dockerfile
-COPY .env.docker .env
+# COPY .env.docker .env
 
 # Build the React app
  RUN npm run build
